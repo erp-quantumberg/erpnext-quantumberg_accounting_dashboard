@@ -145,6 +145,21 @@ frappe.pages["accounting-dashboard"].on_page_load = function (wrapper) {
         );
       }
 
+      const pageHead = page.wrapper.find(".page-head");
+      const headerRow = pageHead.find(".page-head-content");
+
+      if (headerRow.length && typeof dashboard.mountHeader === "function") {
+        pageHead.addClass("qg-page-head");
+
+        let headerRoot = headerRow.find("#quantumberg-global-header");
+        if (!headerRoot.length) {
+          headerRoot = $('<div id="quantumberg-global-header"></div>');
+          headerRow.prepend(headerRoot);
+        }
+
+        dashboard.mountHeader(headerRoot[0]);
+      }
+
       dashboard.mount(root);
     } catch (error) {
       console.error("Accounting Dashboard initialization failed:", error);
