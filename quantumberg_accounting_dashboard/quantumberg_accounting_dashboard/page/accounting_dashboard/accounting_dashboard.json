@@ -1,0 +1,19 @@
+{
+  "doctype": "Page",
+  "name": "accounting-dashboard",
+  "title": "Accounting Dashboard",
+  "module": "Quantumberg Accounting Dashboard",
+  "standard": "Yes",
+  "icon": "accounting",
+  "roles": [
+    {
+      "role": "System Manager"
+    },
+    {
+      "role": "Accounts Manager"
+    },
+    {
+      "role": "Accounts User"
+    }
+  ]
+}
