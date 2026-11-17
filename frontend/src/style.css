@@ -512,3 +512,214 @@ button {
   color: #5f5781;
   background: #f6f4fd;
 }
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) {
+  background:
+    radial-gradient(900px 420px at 100% -10%, rgb(196 63 157 / 14%) 0%, transparent 60%),
+    radial-gradient(760px 420px at 0% 0%, rgb(73 59 145 / 20%) 0%, transparent 55%),
+    linear-gradient(180deg, #0f0e14 0%, #121016 55%, #0d0c12 100%);
+  background-attachment: fixed;
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .dashboard-header.qb-card {
+  background:
+    radial-gradient(900px 260px at 100% -40%, rgb(255 255 255 / 10%), transparent 60%),
+    radial-gradient(720px 260px at 0% -60%, rgb(196 181 253 / 12%), transparent 62%),
+    linear-gradient(120deg, #241b4d 0%, #452260 52%, #73265f 100%);
+  border-color: rgb(255 255 255 / 14%);
+  box-shadow:
+    0 16px 38px rgb(0 0 0 / 45%),
+    inset 0 1px 0 rgb(255 255 255 / 14%);
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .kpi-grid > .kpi-card {
+  background:
+    radial-gradient(620px 220px at 100% -25%, rgb(255 255 255 / 12%), transparent 62%),
+    linear-gradient(140deg, #241b4d 0%, #452260 46%, #73265f 100%);
+  border-color: rgb(255 255 255 / 14%);
+  box-shadow:
+    0 14px 32px rgb(0 0 0 / 40%),
+    inset 0 1px 0 rgb(255 255 255 / 14%);
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .kpi-grid > .kpi-card:hover {
+  border-color: rgb(255 255 255 / 24%);
+  box-shadow:
+    0 18px 40px rgb(0 0 0 / 50%),
+    inset 0 1px 0 rgb(255 255 255 / 18%);
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .qb-card:not(.dashboard-header) {
+  border-color: #2d2938;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 35%);
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .qb-card:not(.dashboard-header):hover {
+  border-color: #403a50;
+  box-shadow: 0 12px 28px rgb(0 0 0 / 45%);
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .qb-card:not(.dashboard-header) .table-card-header,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .qb-card:not(.dashboard-header) .chart-card-header,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .qb-card:not(.dashboard-header) .bank-card-header,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .qb-card:not(.dashboard-header) .transactions-card-header,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .qb-card:not(.dashboard-header) .report-library-header {
+  background: linear-gradient(180deg, #201c2b, #191622);
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .qb-card:not(.dashboard-header) .table-scroll thead th {
+  color: #b9b2cc;
+  background: #211d2c;
+  border-bottom-color: #2d2938;
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .dashboard-link,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .voucher-link,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .table-doc-link {
+  color: #c4b5fd;
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .dashboard-link:hover,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .table-doc-link:hover {
+  color: #ddd6fe;
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .dashboard-button--secondary:hover {
+  color: #ddd6fe;
+  border-color: #6d5fa0;
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .error-banner {
+  color: #fecdd3;
+  background: #4c0519;
+  border-color: #881337;
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .skeleton-block {
+  background: #2a2635;
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .skeleton-block::after {
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 8%), transparent);
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .type-badge--sales {
+  color: #93c5fd;
+  background: rgb(30 58 138 / 45%);
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .type-badge--purchase,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .status-badge--warning {
+  color: #fcd34d;
+  background: rgb(120 53 15 / 45%);
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .type-badge--payment,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .status-badge--success,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .bank-status {
+  color: #6ee7b7;
+  background: rgb(6 78 59 / 45%);
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .type-badge--journal {
+  color: #c4b5fd;
+  background: rgb(76 29 149 / 45%);
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .status-badge--danger {
+  color: #fda4af;
+  background: rgb(136 19 55 / 45%);
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .status-badge--neutral {
+  color: #cbd5e1;
+  background: rgb(51 65 85 / 55%);
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .bank-status-dot {
+  background: #34d399;
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .report-library-note {
+  color: #c4b5fd;
+  background: rgb(76 29 149 / 45%);
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .bank-account-icon,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .report-tile-icon,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .table-doc-icon {
+  color: #c4b5fd;
+  background: rgb(76 29 149 / 45%);
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .bank-account {
+  background: #201c2b;
+  border-color: #2d2938;
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .bank-figure,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .report-tile {
+  border-color: #2d2938;
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .bank-figure--total {
+  border-color: transparent;
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .bank-footer,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .transactions-footer {
+  border-color: #2d2938;
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .report-tile:hover {
+  border-color: #4a4166;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 35%);
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .report-tile-arrow {
+  color: #8f88a3;
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .dashboard-control input,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .dashboard-control select,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .table-filter,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .table-search input {
+  color-scheme: dark;
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .dashboard-header .dashboard-control select option {
+  color: #f4f2fb;
+  background: #23212c;
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .apexcharts-xaxis-label,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .apexcharts-yaxis-label,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .apexcharts-legend-text,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .apexcharts-no-data-text {
+  fill: #a8a2b8 !important;
+  color: #a8a2b8 !important;
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .apexcharts-gridline,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .apexcharts-grid-borders line {
+  stroke: #2d2938 !important;
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .apexcharts-tooltip.apexcharts-theme-light {
+  background: #23212c !important;
+  border-color: #3a3648 !important;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 45%) !important;
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .apexcharts-tooltip-title {
+  background: #2b2838 !important;
+  border-color: #3a3648 !important;
+  color: #f4f2fb !important;
+}
+
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .apexcharts-tooltip-text-y-label,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .apexcharts-tooltip-text-y-value,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .apexcharts-tooltip-text-z-label,
+html[data-theme="dark"] :is(#quantumberg-accounting-dashboard-root, #app) .apexcharts-tooltip-text-z-value {
+  color: #e8e4f2 !important;
+}

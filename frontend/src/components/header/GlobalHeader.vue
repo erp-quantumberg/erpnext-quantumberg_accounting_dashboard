@@ -1,6 +1,13 @@
 <script setup>
 import { computed, onBeforeUnmount, onMounted, ref } from "vue";
-import { Landmark } from "lucide-vue-next";
+import { Bell, ChevronDown, Landmark } from "lucide-vue-next";
+
+const props = defineProps({
+  apiNamespace: {
+    type: String,
+    default: "quantumberg_accounting_dashboard.api",
+  },
+});
 
 const searchText = ref("");
 const searchResults = ref([]);
@@ -114,7 +121,7 @@ async function selectCompany(value) {
   }
   try {
     await window.frappe.call({
-      method: "quantumberg_accounting_dashboard.api.set_default_company",
+      method: `${props.apiNamespace}.set_default_company`,
       args: { company: value },
     });
     company.value = value;
@@ -177,7 +184,7 @@ function changeLanguage(language) {
     return;
   }
   window.frappe.call({
-    method: "quantumberg_accounting_dashboard.api.set_user_language",
+    method: `${props.apiNamespace}.set_user_language`,
     args: { language },
     callback: () => window.location.reload(),
     error: () => window.frappe.msgprint?.("Unable to change language."),
@@ -215,7 +222,7 @@ onBeforeUnmount(() => {
       <div class="qg-menu-wrap" v-if="companies.length">
         <button class="qg-select" type="button" @click.stop="toggleMenu('company')">
           <span class="qg-truncate">{{ company || "Select company" }}</span>
-          <span class="qg-chevron">⌄</span>
+          <ChevronDown class="qg-chevron" :size="16" />
         </button>
         <div v-if="menuOpen === 'company'" class="qg-dropdown qg-company-menu">
           <div class="qg-dropdown-title">Switch company</div>
@@ -246,12 +253,12 @@ onBeforeUnmount(() => {
 
     <div class="qg-actions">
       <button class="qg-icon-button qg-bell" title="Notifications" @click.stop="openNotifications">
-        ♧<span class="qg-notification-dot"></span>
+        <Bell :size="20" /><span class="qg-notification-dot"></span>
       </button>
 
       <div class="qg-menu-wrap">
         <button class="qg-action-button" @click.stop="toggleMenu('language')">
-          <span class="qg-globe">◎</span><span>{{ languageLabel }}</span><span class="qg-chevron">⌄</span>
+          <span class="qg-globe">◎</span><span>{{ languageLabel }}</span><ChevronDown class="qg-chevron" :size="16" />
         </button>
         <div v-if="menuOpen === 'language'" class="qg-dropdown qg-right-menu">
           <button class="qg-dropdown-item" @click="changeLanguage('en')">English</button>
@@ -263,7 +270,7 @@ onBeforeUnmount(() => {
         <button class="qg-user-button" @click.stop="toggleMenu('user')">
           <span class="qg-avatar">{{ userInitials }}</span>
           <span class="qg-user-name">{{ displayUser }}</span>
-          <span class="qg-chevron">⌄</span>
+          <ChevronDown class="qg-chevron" :size="16" />
         </button>
         <div v-if="menuOpen === 'user'" class="qg-dropdown qg-right-menu">
           <div class="qg-user-summary"><strong>{{ displayUser }}</strong><small>{{ user }}</small></div>
